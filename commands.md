@@ -12,6 +12,7 @@ It allows developers to execute Node.js packages directly from the npm registry 
 CLI
 - ng v: Output Angular Version in the console.
 - ng serve -o: Starts angular application.
+- ng new <app-name>: Creates a new angular application
 - ng g component <component-name>: Creates a new component.
 - ng g interface <path/interface-name>: Creates a new interface (e.g. ng g interface models/appointment)
 
