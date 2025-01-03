@@ -1,0 +1,14 @@
+<form>
+    <label for="book_title">Book Title</label>
+    <input [(ngModel)]="newBookTitle" type="text" id="book_title" name="book_title">Title
+    <label for="book_author">Book Author</label>
+    <input [(ngModel)]="newBookAuthor" type="text" id="book_author" name="book_author">Title
+    <button (click)="addBook()">Add Book</button>
+</form>
+
+<ul>
+    <li *ngFor="let book of books; index as i">
+        {{ book.title }} - {{ book.author }}
+        <button (click)="deleteBook(i)">Delete</button>
+    </li>
+</ul>
