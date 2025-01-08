@@ -15,6 +15,8 @@ CLI
 - ng new <app-name>: Creates a new angular application
 - ng g component <component-name>: Creates a new component.
 - ng g interface <path/interface-name>: Creates a new interface (e.g. ng g interface models/appointment)
+- ng g module <module-name>: Creates a new module (It organizes code in a folder for a group of related features)
+- ng g service <path/service-name>: Creates a new service
 
 
 Angular Directives
