@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ReservationFormComponent } from '../reservation-form/reservation-form.component';
 import { ReservationListComponent } from '../reservation-list/reservation-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 // ReactiveFormsModule (Reactive Form Validation) -> Validate Form in TypeScript Class
 // FormsModule (Template-Driven Form Validation) -> Validate Form in HTML Template
@@ -16,6 +17,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    RouterModule,
   ]
 })
 export class ReservationModule { }
