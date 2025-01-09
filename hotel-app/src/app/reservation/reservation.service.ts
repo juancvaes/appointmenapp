@@ -1,9 +1,33 @@
 import { Injectable } from '@angular/core';
+import { Reservation } from '../models/reservation';
 
+// Injectable means that we are now able to inject the reservation service into a constructor
 @Injectable({
   providedIn: 'root'
 })
 export class ReservationService {
 
-  constructor() { }
+    private reservations: Reservation[] = [];
+
+    getReservations(): Reservation[] {
+      return this.reservations;
+    }
+
+    getReservation(id: string): Reservation | undefined {
+      return this.reservations.find(res => res.id === id);
+    }
+
+    addReservation(reservation: Reservation): void {
+      this.reservations.push(reservation);
+    }
+
+    deleteReservation(id: string): void {
+      let index = this.reservations.findIndex(res => res.id === id);
+      this.reservations.splice(index, 1);
+    }
+
+    updateReservation(reservation: Reservation): void {
+      let index = this.reservations.findIndex(res => res.id === reservation.id);
+      this.reservations[index] = reservation;
+    }
 }
