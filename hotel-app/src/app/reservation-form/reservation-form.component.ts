@@ -47,9 +47,13 @@ export class ReservationFormComponent implements OnInit {
       // Checking if the active route contains and id parameter
       let id = this.activeRoute.snapshot.paramMap.get('id')
       if (id){
-        this.reservationService.updateReservation(id, reservation);
+        this.reservationService.updateReservation(id, reservation).subscribe(() => {
+          console.log("Update request got processed.")
+        });
       } else {
-        this.reservationService.addReservation(reservation);
+        this.reservationService.addReservation(reservation).subscribe(() => {
+          console.log("Create request got processed.")
+        });
       }
       this.router.navigate(["/list"])
     }
