@@ -1,0 +1,11 @@
+@if (this.todos.length) {
+    <ul>
+        <li *ngFor="let todo of todos; index as i">
+            {{ todo.id }} -> {{ todo.text }}
+        </li>
+    </ul>
+}
+@else {
+    <p>No todos here!</p>
+}
+

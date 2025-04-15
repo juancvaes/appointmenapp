@@ -1,3 +1,17 @@
-<h1>To Do App</h1>
-<app-todo-add></app-todo-add>
-<router-outlet />
+<form>
+    <div>
+        <label for="todo-input"></label>
+        <input 
+          [(ngModel)]="newToDoText" 
+          type="text" 
+          name="todo-input" 
+          id="todo-input" 
+          placeholder="Make the bed when waking up"
+        >
+    </div>
+    <button (click)="addToDo()" type="submit">Add</button>
+</form>
+
+<app-todo-list 
+    [todos]="currentToDos"
+></app-todo-list>
