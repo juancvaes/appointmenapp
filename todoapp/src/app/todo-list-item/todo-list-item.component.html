@@ -1,10 +1,11 @@
 <div>
-    <label for="todo-list-item-id-{{id}}"></label>
-    <input 
-      type="radio" 
+    <input
+      type="checkbox" 
       id="todo-list-item-id-{{id}}"
       name="todo-list-item-id-{{id}}"
-    >{{ text }}
+      (click)="handleClick()"
+    >
+    <label for="todo-list-item-id-{{id}}">{{ text }}</label>
     <div style="display: inline;">
       <button>Delete</button>
       <button>Edit</button>

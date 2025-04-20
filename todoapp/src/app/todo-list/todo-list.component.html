@@ -1,11 +1,14 @@
-
-@for (todo of todos; track todo.id) {
-    <app-todo-list-item
-        [id]="todo.id"
-        [text]="todo.text"
-    ></app-todo-list-item>
-} @empty {
-    <p>No todos here!</p>
-}
-
-
+<div>
+    @if (this.todos.length) {
+        <fieldset>
+            @for (todo of todos; track todo.id) {
+                <app-todo-list-item
+                    [id]="todo.id"
+                    [text]="todo.text"
+                ></app-todo-list-item>
+            }
+        </fieldset>
+    } @else {
+        <p>No todos here!</p>
+    }
+</div>

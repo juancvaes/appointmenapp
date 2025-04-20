@@ -9,4 +9,11 @@ import { Component, Input } from '@angular/core';
 export class TodoListItemComponent {
   @Input() id: number = -1;
   @Input() text: string = "";
+  
+  completed: boolean = false;
+
+  handleClick() {
+    this.completed = true;
+    console.log(`Task ${this.id} got completed`)
+  }
 }
