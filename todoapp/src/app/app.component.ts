@@ -17,11 +17,11 @@ import { ToDo } from './models/todo';
 export class AppComponent {
   title = 'todoapp';
   newToDoText: string = "";
-  currentToDos: ToDo[] = [];
+  currentTodos: ToDo[] = [];
 
   addToDo(){
     if (this.newToDoText.length){
-      this.currentToDos.push({
+      this.currentTodos.push({
         id: Date.now(),
         text: this.newToDoText,
     })
