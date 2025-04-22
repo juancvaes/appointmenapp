@@ -14,4 +14,10 @@ import { TodoListItemComponent } from '../todo-list-item/todo-list-item.componen
 })
 export class TodoListComponent {
   @Input() todos: ToDo[] = [];
+
+  onItemDeleted(itemId: number){
+    // console.log(`ItemDeleted event read from parent ${itemId}`)
+    const index = this.todos.findIndex(item => item.id === itemId);
+    this.todos.splice(index, 1);
+  }
 }

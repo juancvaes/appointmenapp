@@ -5,6 +5,7 @@
                 <app-todo-list-item
                     [id]="todo.id"
                     [text]="todo.text"
+                    (itemDeleted)="onItemDeleted($event)"
                 ></app-todo-list-item>
             }
         </fieldset>

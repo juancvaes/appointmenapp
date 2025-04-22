@@ -7,7 +7,6 @@
     >
     <label for="todo-list-item-id-{{id}}">{{ text }}</label>
     <div style="display: inline;">
-      <button>Delete</button>
-      <button>Edit</button>
+      <button (click)="deleteTodo()">Delete</button>
     </div>
 </div>
