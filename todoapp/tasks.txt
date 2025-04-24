@@ -1,0 +1,2 @@
+[X] Add tasks count
+[] Add two-way data binding

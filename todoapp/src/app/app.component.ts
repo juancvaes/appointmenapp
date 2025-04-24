@@ -24,7 +24,7 @@ export class AppComponent {
       this.currentTodos.push({
         id: Date.now(),
         text: this.newToDoText,
-    })
-    this.newToDoText = "";
+      });
+      this.newToDoText = "";
   }}
 }

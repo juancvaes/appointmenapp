@@ -1,4 +1,4 @@
-import { Component, Input, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ToDo } from '../models/todo';
 import { TodoListItemComponent } from '../todo-list-item/todo-list-item.component';
@@ -14,6 +14,7 @@ import { TodoListItemComponent } from '../todo-list-item/todo-list-item.componen
 })
 export class TodoListComponent {
   @Input() todos: ToDo[] = [];
+  @Input() todoCount: number = 0;
 
   onItemDeleted(itemId: number){
     // console.log(`ItemDeleted event read from parent ${itemId}`)
