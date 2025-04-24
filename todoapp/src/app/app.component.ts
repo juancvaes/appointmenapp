@@ -25,6 +25,7 @@ export class AppComponent {
         id: Date.now(),
         text: this.newToDoText,
         important: false,
+        completed: false,
       });
       this.newToDoText = "";
   }}

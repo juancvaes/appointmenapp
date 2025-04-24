@@ -1,4 +1,4 @@
-<p>{{ this.todoCount }} Todos, {{ this.todos | todoImportantCount }} important Todos</p> 
+<p>{{ this.todoCount }} Todos, {{ this.todos | todoImportantCount }} important Todos, {{this.todos | todoCompletedCount }} completed todos</p> 
 <div>
     @if (this.todos.length) {
         <fieldset>
@@ -8,6 +8,7 @@
                     [text]="todo.text"
                     (itemDeleted)="onItemDeleted($event)"
                     [(important)]="todo.important"
+                    [(completed)]="todo.completed"
                 ></app-todo-list-item>
             }
         </fieldset>

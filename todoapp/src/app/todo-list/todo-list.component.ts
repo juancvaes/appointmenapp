@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { ToDo } from '../models/todo';
 import { TodoListItemComponent } from '../todo-list-item/todo-list-item.component';
 import { todoImportantCountPipe } from '../important-count.pipe';
+import { todoCompletedCountPipe } from '../completed-count.pipe';
 
 @Component({
   selector: 'app-todo-list',
   imports: [
     CommonModule,
     todoImportantCountPipe,
+    todoCompletedCountPipe,
     TodoListItemComponent
   ],
   templateUrl: './todo-list.component.html',

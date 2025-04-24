@@ -10,10 +10,12 @@ export class TodoListItemComponent {
   @Input() id: number = -1;
   @Input() text: string = "";
   @Output() itemDeleted = new EventEmitter<number>();
+
   @Input() important: boolean = false;
   @Output() importantChange = new EventEmitter<boolean>();
   
-  completed: boolean = false;
+  @Input() completed: boolean = false;
+  @Output() completedChange = new EventEmitter<boolean>();
   deleted: boolean = false;
 
   handleClick() {
@@ -24,6 +26,7 @@ export class TodoListItemComponent {
       this.completed = false;
       console.log(`Task ${this.id} got uncompleted`)
     }
+    this.completedChange.emit(this.completed)
   }
 
   deleteTodo(){
