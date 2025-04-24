@@ -10,6 +10,8 @@ export class TodoListItemComponent {
   @Input() id: number = -1;
   @Input() text: string = "";
   @Output() itemDeleted = new EventEmitter<number>();
+  @Input() important: boolean = false;
+  @Output() importantChange = new EventEmitter<boolean>();
   
   completed: boolean = false;
   deleted: boolean = false;
@@ -27,5 +29,10 @@ export class TodoListItemComponent {
   deleteTodo(){
     this.deleted = true;
     this.itemDeleted.emit(this.id)
+  }
+
+  toggleImportant(){
+    this.important = !this.important;
+    this.importantChange.emit(this.important);
   }
 }

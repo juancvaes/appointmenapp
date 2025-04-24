@@ -8,5 +8,6 @@
     <label for="todo-list-item-id-{{id}}">{{ text }}</label>
     <div style="display: inline;">
       <button (click)="deleteTodo()">Delete</button>
+      <button (click)="toggleImportant()">@if(important){ Not important } @else{ Important }</button>
     </div>
 </div>
