@@ -1,2 +1,3 @@
 [X] Add tasks count
 [X] Add two-way data binding
+[X] Use @ViewChild (Used to get a reference to a DOM element & interact with it programatically from the .ts component)
